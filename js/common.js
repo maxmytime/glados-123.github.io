@@ -22,7 +22,7 @@ $(function() {
         }
     });
 
-    $('#responsiveTabsDemo').responsiveTabs({
+    $('#responsive-tabs').responsiveTabs({
 	    startCollapsed: 'accordion'
 	});
 
