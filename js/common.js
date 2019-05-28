@@ -74,3 +74,19 @@ $(function() {
     window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
     })(this, this.document);
 
+    window.onload=function() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[135].setAttribute("class", "active-area");
+        svgb1[136].setAttribute("class", "active-area");
+        svgb1[18].setAttribute("class", "active-area");
+        svgb1[14].setAttribute("class", "active-area");
+        svgb1[15].setAttribute("class", "active-area");
+        svgb1[137].setAttribute("class", "active-area");
+        svgb1[138].setAttribute("class", "active-area");
+        svgb1[16].setAttribute("class", "active-area");
+        svgb1[17].setAttribute("class", "active-area");
+        svgb1[114].setAttribute("class", "active-area");
+        svgb1[112].setAttribute("class", "active-area");
+      };
