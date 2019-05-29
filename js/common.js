@@ -30,9 +30,34 @@ $(function() {
     $("#tab-1").removeClass("r-tabs-state-default");
     $("#tab-1").addClass("r-tabs-state-active");
 
+
+    $('.owl-carousel').owlCarousel({
+        autoplay:true,
+        autoplayTimeout:5000,
+        autoplayHoverPause:true,
+        loop:true,
+        margin:10,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:3,
+                nav:false
+            },
+            1000:{
+                items:5,
+                nav:true,
+                loop:false
+            }
+        }
+    })
+
 });
 
-// $("html").addClass("myClass");
+// menu
 
 (function (window, document) {
     var menu = document.getElementById('menu'),
@@ -74,6 +99,8 @@ $(function() {
     window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
     })(this, this.document);
 
+
+    // SVG map
     window.onload=function() {
         var object = document.getElementById("mapObject");
         var svgDocument = object.contentDocument;
