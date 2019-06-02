@@ -26,11 +26,6 @@ $(function() {
 	    startCollapsed: 'accordion'
 	});
 
-    $("#tab-1").css("display","block");
-    $("#tab-1").removeClass("r-tabs-state-default");
-    $("#tab-1").addClass("r-tabs-state-active");
-
-
     $('.owl-carousel').owlCarousel({
         autoplay:true,
         autoplayTimeout:5000,
@@ -103,15 +98,194 @@ $(function() {
         var object = document.getElementById("mapObject");
         var svgDocument = object.contentDocument;
         var svgb1 = svgDocument.getElementsByTagName('path');
-        svgb1[135].setAttribute("class", "active-area");
-        svgb1[136].setAttribute("class", "active-area");
-        svgb1[18].setAttribute("class", "active-area");
-        svgb1[14].setAttribute("class", "active-area");
-        svgb1[15].setAttribute("class", "active-area");
-        svgb1[137].setAttribute("class", "active-area");
-        svgb1[138].setAttribute("class", "active-area");
-        svgb1[16].setAttribute("class", "active-area");
-        svgb1[17].setAttribute("class", "active-area");
-        svgb1[114].setAttribute("class", "active-area");
-        svgb1[112].setAttribute("class", "active-area");
+        svgb1[135].setAttribute("class", "active-area");   // Красноярский край *
+        svgb1[136].setAttribute("class", "active-area");   // Томская область *
+        svgb1[18].setAttribute("class", "active-area");    // Республика Тыва *
+        svgb1[14].setAttribute("class", "active-area");    // Омская область *
+        svgb1[15].setAttribute("class", "active-area");    // Новосибирская область *
+        svgb1[137].setAttribute("class", "active-area");   // Кемеровская область *
+        svgb1[138].setAttribute("class", "active-area");   // Республика Хакасия *
+        svgb1[16].setAttribute("class", "active-area");    // Алтайский край *
+        svgb1[17].setAttribute("class", "active-area");    // Республика Алтай *
+        svgb1[114].setAttribute("class", "active-area");   // Иркутская область *
       };
+
+    // Республика Алтай
+    document.getElementById("altai-republic").onmouseover = function() {altaiRepublicMouseOver()};
+    document.getElementById("altai-republic").onmouseout = function() {altaiRepublicMouseOut()};
+
+    function altaiRepublicMouseOver() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[17].setAttribute("class", "active-area-hover");
+    }
+
+    function altaiRepublicMouseOut() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[17].setAttribute("class", "active-area");
+    }
+
+    // Алтайский край
+    document.getElementById("altai-region").onmouseover = function() {altaiRegionMouseOver()};
+    document.getElementById("altai-region").onmouseout = function() {altaiRegionMouseOut()};
+
+    function altaiRegionMouseOver() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[16].setAttribute("class", "active-area-hover");
+    }
+
+    function altaiRegionMouseOut() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[16].setAttribute("class", "active-area");
+    }
+
+    // Иркутская область
+    document.getElementById("irkutsk-region").onmouseover = function() {irkutskRegionMouseOver()};
+    document.getElementById("irkutsk-region").onmouseout = function() {irkutskRegionMouseOut()};
+
+    function irkutskRegionMouseOver() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[114].setAttribute("class", "active-area-hover");
+    }
+
+    function irkutskRegionMouseOut() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[114].setAttribute("class", "active-area");
+    }
+
+    // Кемеровская область
+    document.getElementById("kemerovo-region").onmouseover = function() {kemerovoRegionMouseOver()};
+    document.getElementById("kemerovo-region").onmouseout = function() {kemerovoRegionMouseOut()};
+
+    function kemerovoRegionMouseOver() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[137].setAttribute("class", "active-area-hover");
+    }
+
+    function kemerovoRegionMouseOut() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[137].setAttribute("class", "active-area");
+    }
+
+    // Красноярский край
+    document.getElementById("krasnoyarsk-region").onmouseover = function() {krasnoyarskRegionMouseOver()};
+    document.getElementById("krasnoyarsk-region").onmouseout = function() {krasnoyarskRegionMouseOut()};
+
+    function krasnoyarskRegionMouseOver() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[135].setAttribute("class", "active-area-hover");
+    }
+
+    function krasnoyarskRegionMouseOut() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[135].setAttribute("class", "active-area");
+    }
+
+    // Новосибирск край
+    document.getElementById("novosibirsk-region").onmouseover = function() {novosibirskRegionMouseOver()};
+    document.getElementById("novosibirsk-region").onmouseout = function() {novosibirskRegionMouseOut()};
+
+    function novosibirskRegionMouseOver() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[15].setAttribute("class", "active-area-hover");
+    }
+
+    function novosibirskRegionMouseOut() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[15].setAttribute("class", "active-area");
+    }
+
+    // Омская область
+    document.getElementById("omsk-region").onmouseover = function() {omskRegionMouseOver()};
+    document.getElementById("omsk-region").onmouseout = function() {omskRegionMouseOut()};
+
+    function omskRegionMouseOver() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[14].setAttribute("class", "active-area-hover");
+    }
+
+    function omskRegionMouseOut() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[14].setAttribute("class", "active-area");
+    }
+
+    // Томская область
+    document.getElementById("tomsk-region").onmouseover = function() {tomskRegionMouseOver()};
+    document.getElementById("tomsk-region").onmouseout = function() {tomskRegionMouseOut()};
+
+    function tomskRegionMouseOver() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[136].setAttribute("class", "active-area-hover");
+    }
+
+    function tomskRegionMouseOut() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[136].setAttribute("class", "active-area");
+    }
+
+    // Республика Тыва
+    document.getElementById("tyva-republic").onmouseover = function() {tyvaRepublicMouseOver()};
+    document.getElementById("tyva-republic").onmouseout = function() {tyvaRepublicMouseOut()};
+
+    function tyvaRepublicMouseOver() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[18].setAttribute("class", "active-area-hover");
+    }
+
+    function tyvaRepublicMouseOut() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[18].setAttribute("class", "active-area");
+    }
+
+    // Республика Хакассия
+    document.getElementById("khakassia-republic").onmouseover = function() {khakassiaRepublicMouseOver()};
+    document.getElementById("khakassia-republic").onmouseout = function() {khakassiaRepublicMouseOut()};
+
+    function khakassiaRepublicMouseOver() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[138].setAttribute("class", "active-area-hover");
+    }
+
+    function khakassiaRepublicMouseOut() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[138].setAttribute("class", "active-area");
+    }
