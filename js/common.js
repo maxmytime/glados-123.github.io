@@ -108,6 +108,7 @@ $(function() {
         svgb1[16].setAttribute("class", "active-area");    // Алтайский край *
         svgb1[17].setAttribute("class", "active-area");    // Республика Алтай *
         svgb1[114].setAttribute("class", "active-area");   // Иркутская область *
+        svgb1[148].setAttribute("class", "active-area");   // Республика Саха (Якутия) *
       };
 
     // Республика Алтай
@@ -288,4 +289,22 @@ $(function() {
         var svgDocument = object.contentDocument;
         var svgb1 = svgDocument.getElementsByTagName('path');
         svgb1[138].setAttribute("class", "active-area");
+    }
+
+    // Республика Саха (Якутия)
+    document.getElementById("yakutiya").onmouseover = function() {yakutiyaMouseOver()};
+    document.getElementById("yakutiya").onmouseout = function() {yakutiyaMouseOut()};
+
+    function yakutiyaMouseOver() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[148].setAttribute("class", "active-area-hover");
+    }
+
+    function yakutiyaMouseOut() {
+        var object = document.getElementById("mapObject");
+        var svgDocument = object.contentDocument;
+        var svgb1 = svgDocument.getElementsByTagName('path');
+        svgb1[148].setAttribute("class", "active-area");
     }
